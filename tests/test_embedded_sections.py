@@ -13,7 +13,8 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("DÍAS", content)
         self.assertIn("HORAS", content)
         self.assertIn("MINUTOS", content)
-        self.assertIn("PARA NUESTRO GRAN DÍA", content)
+        self.assertNotIn('class="title"', content)
+        self.assertNotIn('class="caption"', content)
 
     def test_existing_rsvp_embed_is_a_contact_form(self):
         content = RSVP.read_text(encoding="utf-8")
