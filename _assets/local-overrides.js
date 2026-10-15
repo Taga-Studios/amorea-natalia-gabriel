@@ -17,6 +17,13 @@
       if (!ceremonyLines.some((line) => text === line)) continue;
 
       paragraph.style.setProperty('color', '#ffffff', 'important');
+      paragraph.style.setProperty('margin-left', '0', 'important');
+      paragraph.style.setProperty('margin-right', '0', 'important');
+      paragraph.style.setProperty('padding-left', '0', 'important');
+      paragraph.style.setProperty('padding-right', '0', 'important');
+      if (text === ceremonyLines[0]) {
+        paragraph.style.setProperty('white-space', 'nowrap', 'important');
+      }
       for (const fragment of paragraph.querySelectorAll('*')) {
         fragment.style.setProperty('color', '#ffffff', 'important');
       }
