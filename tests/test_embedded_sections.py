@@ -28,7 +28,7 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("height:26px", content)
         self.assertIn("min-height:52px", content)
         self.assertIn("transform:scale(1.35)", content)
-        self.assertIn("padding-top:55px", content)
+        self.assertIn("padding-top:8px", content)
 
 
 if __name__ == "__main__":
