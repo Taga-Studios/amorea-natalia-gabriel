@@ -24,7 +24,7 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("¿Podrás acompañarnos en nuestro gran día?", content)
         self.assertIn("Sí, ahí estaré!", content)
         self.assertIn("No podré asistir, pero los llevo en mi corazón", content)
-        self.assertIn("font-size:18px", content)
+        self.assertIn("font-size:22px", content)
         self.assertIn("height:22px", content)
         self.assertIn("min-height:60px", content)
         self.assertIn('font:16px "Times New Roman",serif', content)
