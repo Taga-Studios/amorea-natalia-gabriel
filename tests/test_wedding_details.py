@@ -19,6 +19,11 @@ class WeddingDetailsTests(unittest.TestCase):
         for removed in ["Natalia Garcia", "Gabriel Meza", "Ciudad de Mexico, Mexico", "31 de Marzo 2026", "16:30 - Coctel"]:
             self.assertNotIn(removed, page)
 
+    def test_envelope_photo_uses_the_couple_photo(self):
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("_assets/media/odarlis-jose.jpg", page)
+        self.assertTrue((ROOT / "_assets" / "media" / "odarlis-jose.jpg").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()
