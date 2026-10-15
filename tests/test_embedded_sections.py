@@ -25,11 +25,11 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("Sí, ahí estaré!", content)
         self.assertIn("No podré asistir, pero los llevo en mi corazón", content)
         self.assertIn("font-size:16px", content)
-        self.assertIn("height:26px", content)
-        self.assertIn("min-height:42px", content)
+        self.assertIn("height:22px", content)
+        self.assertIn("min-height:36px", content)
         self.assertIn("white-space:nowrap", content)
-        self.assertIn("transform:scale(1.35)", content)
-        self.assertIn("padding-top:8px", content)
+        self.assertIn("transform:scale(1.2)", content)
+        self.assertNotIn('class="notice"', content)
 
 
 if __name__ == "__main__":
