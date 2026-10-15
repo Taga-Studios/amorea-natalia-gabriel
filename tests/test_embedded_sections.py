@@ -13,13 +13,16 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("DÍAS", content)
         self.assertIn("HORAS", content)
         self.assertIn("MINUTOS", content)
-        self.assertIn("SEGUNDOS", content)
+        self.assertIn("PARA NUESTRO GRAN DÍA", content)
 
     def test_existing_rsvp_embed_is_a_contact_form(self):
         content = RSVP.read_text(encoding="utf-8")
         self.assertIn('id="rsvp-form"', content)
         self.assertIn('name="nombre"', content)
         self.assertIn('name="asistencia"', content)
+        self.assertIn("¿Podrás acompañarnos en nuestro gran día?", content)
+        self.assertIn("Sí, ahí estaré!", content)
+        self.assertIn("No podré asistir, pero los llevo en mi corazón", content)
 
 
 if __name__ == "__main__":
