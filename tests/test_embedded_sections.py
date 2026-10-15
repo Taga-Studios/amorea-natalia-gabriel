@@ -24,11 +24,11 @@ class EmbeddedSectionTests(unittest.TestCase):
         self.assertIn("¿Podrás acompañarnos en nuestro gran día?", content)
         self.assertIn("Sí, ahí estaré!", content)
         self.assertIn("No podré asistir, pero los llevo en mi corazón", content)
-        self.assertIn("font-size:20px", content)
+        self.assertIn("font-size:22px", content)
         self.assertIn("height:26px", content)
         self.assertIn("min-height:52px", content)
-        self.assertIn("transform:scale(1.2)", content)
-        self.assertIn("padding-top:32px", content)
+        self.assertIn("transform:scale(1.35)", content)
+        self.assertIn("padding-top:55px", content)
 
 
 if __name__ == "__main__":
