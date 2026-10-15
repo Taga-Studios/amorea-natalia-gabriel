@@ -24,6 +24,9 @@
       if (text === ceremonyLines[0]) {
         paragraph.style.setProperty('white-space', 'nowrap', 'important');
       }
+      if (text === ceremonyLines[1]) {
+        paragraph.style.setProperty('transform', 'translateY(-48px)', 'important');
+      }
       for (const fragment of paragraph.querySelectorAll('*')) {
         fragment.style.setProperty('color', '#ffffff', 'important');
       }
