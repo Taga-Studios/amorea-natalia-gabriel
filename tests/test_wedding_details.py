@@ -23,6 +23,7 @@ class WeddingDetailsTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("_assets/media/odarlis-jose.jpg", page)
         self.assertTrue((ROOT / "_assets" / "media" / "odarlis-jose.jpg").is_file())
+        self.assertIn('"A":-80.43545751633985,"B":65.0,"D":385.0', page)
 
 
 if __name__ == "__main__":
